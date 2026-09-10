@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SendFriends | A Generation on Mission</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-stone-50 text-stone-800 font-sans selection:bg-emerald-200">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-stone-50/90 backdrop-blur-md z-40 border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <!-- Logo / Home Link -->
+            <a href="#" class="flex items-center gap-2 hover:opacity-80 transition-opacity" aria-label="Go to Home">
+                <i data-lucide="globe-2" class="text-emerald-600 w-7 h-7"></i>
+                <span class="text-2xl font-black tracking-tight text-stone-900">SendFriends.</span>
+            </a>
+            
+            <div class="flex items-center gap-4 sm:gap-6">
+                <div class="hidden sm:flex items-center gap-6 text-sm font-semibold text-stone-600">
+                    <a href="#story" class="hover:text-emerald-600 transition-colors">Our Story</a>
+                    <a href="#japan" class="hover:text-emerald-600 transition-colors">Japan Focus</a>
+                    <a href="#impact" class="hover:text-emerald-600 transition-colors">Impact</a>
+                </div>
+                
+                <button 
+                    onclick="openContact()"
+                    class="p-2 text-stone-500 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-all"
+                    aria-label="Contact Us"
+                >
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                </button>
+                
+                <a 
+                    href="https://pioneers.org/donate" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="flex items-center gap-2 bg-stone-900 text-stone-50 px-5 py-2.5 rounded-full font-bold text-sm hover:bg-emerald-700 transition-all shadow-sm"
+                >
+                    <i data-lucide="heart" class="text-rose-400 w-4 h-4"></i>
+                    <span class="hidden sm:inline">Donate</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-6 sm:pt-40 sm:pb-32">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-bold mb-4">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                <span>A Generation on Mission</span>
+            </div>
+            <h1 class="text-5xl sm:text-7xl font-black text-stone-900 leading-[1.1] tracking-tight">
+                Taking the Greatest Story <br class="hidden sm:block"/> to the ends of the earth.
+            </h1>
+            <p class="text-lg sm:text-xl text-stone-600 max-w-2xl mx-auto leading-relaxed">
+                We are a collective of friends passionate about the Great Commission. 
+                No complex jargon, no heavy bureaucracy—just radical obedience and a deep love for the unreached.
+            </p>
+            <div class="pt-4">
+                <a href="#story" class="inline-flex items-center gap-2 text-emerald-700 font-bold hover:gap-4 transition-all group">
+                    Discover our mission <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Story / Mission Section -->
+    <section id="story" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-black text-stone-900 mb-4">The Heartbeat</h2>
+                <p class="text-stone-500 max-w-2xl mx-auto">Why we do what we do, broken down into three simple truths.</p>
+            </div>
+            
+            <div class="grid sm:grid-cols-3 gap-8">
+                <div class="bg-stone-50 p-8 rounded-3xl border border-stone-100">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-600 mb-6">
+                        <i data-lucide="map" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-stone-900">The Journey</h3>
+                    <p class="text-stone-600 leading-relaxed">
+                        It starts with a simple "yes". We believe everyone has a role to play in God's global story. Whether you are called to go, pray, or send, the journey is meant to be taken together as friends.
+                    </p>
+                </div>
+                
+                <div class="bg-stone-50 p-8 rounded-3xl border border-stone-100">
+                    <div class="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600 mb-6">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-stone-900">The Unreached</h3>
+                    <p class="text-stone-600 leading-relaxed">
+                        Over 3 billion people have never heard the name of Jesus. They don't have a Bible in their language or a believer in their neighborhood. We are focusing our lives on changing that statistic.
+                    </p>
+                </div>
+
+                <div class="bg-stone-50 p-8 rounded-3xl border border-stone-100">
+                    <div class="w-12 h-12 bg-rose-100 rounded-2xl flex items-center justify-center text-rose-600 mb-6">
+                        <i data-lucide="book-open" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-stone-900">Great Commission</h3>
+                    <p class="text-stone-600 leading-relaxed">
+                        Matthew 28 isn't the "Great Suggestion." It's our primary calling. We exist to make disciples of all nations, prioritizing places where the gospel has not yet taken root.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Country Focus: Japan -->
+    <section id="japan" class="py-20 sm:py-32 bg-stone-900 text-stone-50 relative overflow-hidden">
+        
+        <!-- Background Japan Outline using public domain SVG path data for the main islands -->
+        <div class="absolute inset-0 z-0 opacity-[0.04] pointer-events-none flex justify-end items-center pr-10 md:pr-32">
+            <svg viewBox="0 0 500 500" class="w-[600px] h-[600px] md:w-[800px] md:h-[800px] fill-rose-500" xmlns="http://www.w3.org/2000/svg">
+                <!-- Abstract/Simplified outline resembling Japan -->
+                <path d="M434.9,79.5c-6.1,2.5-16.1,12.7-21.7,19.3c-15.5,18.4-23.7,29.3-33.1,38.1c-15.7,14.6-26.6,18.1-46.7,24.6
+                c-14.7,4.8-19.1,11-23.4,22.6c-4.1,11.2-12.7,25.4-21.9,35.6c-13.8,15.2-19.3,28-26.9,42.4c-9,17-21,30.3-34.9,45.7
+                c-12.1,13.4-25.1,23.3-37.4,32.7c-17.7,13.4-32.9,20.8-49.8,29.9c-16.7,9-28.7,19.2-39.7,31.6c-5.7,6.4-17.1,15.8-25.4,18.4
+                c-13.7,4.3-15.6-2.5-12.3-11.4c3.4-9.2,10.6-20.2,20.6-29.4c12.2-11.2,24.5-22.1,38.4-30.8c16.3-10.2,30.5-21.3,44.7-33.5
+                c13.7-11.7,25.9-25.8,36.5-40.8c10.5-14.8,20.4-29.5,31.9-42.3c10.4-11.5,19.9-24.8,27.3-38.3c8.7-16,14.5-26.7,28.6-38.8
+                c13.6-11.7,25.5-19.7,43.2-26.3c19.1-7.1,33-16.2,46.9-31.5C397.6,76.8,416.7,68,432.2,74C436.5,75.6,438.3,78.1,434.9,79.5z"/>
+                <path d="M129.4,364.5c-8.9,4.2-20.8,11.1-28.1,18.6c-10.4,10.7-15.4,23.1-20.3,37.2c-2.3,6.7-1.4,9.3,4.2,6.5
+                c7.4-3.7,15.1-9.6,22.2-16.8c10.7-10.7,17.2-21.6,24.6-34.1C136.2,368.7,135.5,361.6,129.4,364.5z"/>
+                <path d="M192.1,332.2c-5.8,6.1-13.1,12.7-19.4,18.3c-8.8,7.8-8.8,11.3-1.6,9.1c7.4-2.2,14.8-6.1,21.6-12.6
+                C200.5,339.6,201.2,322.6,192.1,332.2z"/>
+            </svg>
+        </div>
+        
+        <div class="max-w-6xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-stone-800 text-stone-300 rounded-full text-xs font-bold mb-6 tracking-wider uppercase shadow-inner">
+                    Current Focus
+                </div>
+                <h2 class="text-4xl sm:text-6xl font-black mb-6 text-white drop-shadow-md">
+                    Target: <span class="text-rose-400">Japan</span>
+                </h2>
+                <p class="text-stone-300 text-lg leading-relaxed mb-8">
+                    Japan is the second largest unreached people group in the world. Despite being highly developed and technologically advanced, less than 1% of the population knows Jesus. We are sending teams to build relationships, plant seeds, and trust God for a revival in the Land of the Rising Sun.
+                </p>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center gap-3 text-stone-200 font-medium">
+                        <div class="w-2.5 h-2.5 rounded-full bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,0.6)]"></div>
+                        120+ Million Population
+                    </li>
+                    <li class="flex items-center gap-3 text-stone-200 font-medium">
+                        <div class="w-2.5 h-2.5 rounded-full bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,0.6)]"></div>
+                        &lt; 1% Evangelical Christian
+                    </li>
+                    <li class="flex items-center gap-3 text-stone-200 font-medium">
+                        <div class="w-2.5 h-2.5 rounded-full bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,0.6)]"></div>
+                        Deep need for community & hope
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Surprise Feature: Interactive Prayer Focus -->
+            <div class="bg-stone-800/90 backdrop-blur p-8 sm:p-10 rounded-[2rem] border border-stone-700 shadow-2xl relative">
+                <div class="flex justify-between items-center mb-8">
+                    <h3 class="text-2xl font-bold flex items-center gap-2">
+                        <i data-lucide="sparkles" class="text-amber-400 w-6 h-6"></i>
+                        Daily Prayer Focus
+                    </h3>
+                </div>
+                
+                <div class="bg-stone-900 p-6 rounded-2xl min-h-[160px] flex items-center mb-6 shadow-inner">
+                    <p id="prayer-text" class="text-lg sm:text-xl font-medium leading-relaxed text-stone-200 transition-opacity duration-300">
+                        <!-- Populated by JS -->
+                    </p>
+                </div>
+                
+                <button 
+                    onclick="nextPrayer()"
+                    class="w-full bg-stone-700 hover:bg-emerald-600 text-white font-bold py-4 rounded-xl transition-colors flex justify-center items-center gap-2 group"
+                >
+                    Generate New Prayer Need
+                    <i data-lucide="refresh-cw" class="w-5 h-5 group-hover:rotate-180 transition-transform duration-500"></i>
+                </button>
+                <p class="text-center text-stone-500 text-xs mt-4">
+                    Join us in lifting up Japan right where you are.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="py-20 bg-emerald-900 text-emerald-50">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-black mb-16 text-white">Our Growing Impact</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="space-y-2">
+                    <div class="text-4xl sm:text-6xl font-black text-emerald-300">1</div>
+                    <div class="text-sm font-medium uppercase tracking-widest text-emerald-200">Singular Focus</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl sm:text-6xl font-black text-emerald-300">3</div>
+                    <div class="text-sm font-medium uppercase tracking-widest text-emerald-200">Cities Reached</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl sm:text-6xl font-black text-emerald-300">12+</div>
+                    <div class="text-sm font-medium uppercase tracking-widest text-emerald-200">Sent Friends</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl sm:text-6xl font-black text-emerald-300">500+</div>
+                    <div class="text-sm font-medium uppercase tracking-widest text-emerald-200">Prayer Partners</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-50 py-12 border-t border-stone-200 text-center text-stone-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col items-center">
+            <a href="#" class="flex items-center gap-2 mb-6 hover:opacity-80 transition-opacity">
+                <i data-lucide="globe-2" class="text-emerald-600 w-6 h-6"></i>
+                <span class="text-xl font-black text-stone-900">SendFriends.</span>
+            </a>
+            <p class="mb-6 max-w-md mx-auto text-sm">
+                Partnering with Pioneers USA to bring the hope of the gospel to the unreached.
+            </p>
+            <div class="flex gap-4 mb-8">
+                <a href="https://pioneers.org/donate" target="_blank" rel="noopener noreferrer" class="text-stone-900 font-bold hover:text-emerald-600 underline decoration-2 underline-offset-4">
+                    Support the Mission
+                </a>
+                <span class="text-stone-300">•</span>
+                <button onclick="openContact()" class="text-stone-900 font-bold hover:text-emerald-600 underline decoration-2 underline-offset-4">
+                    Get in Touch
+                </button>
+            </div>
+            <p class="text-xs">
+                © <span id="year"></span> SendFriends. All rights reserved. 
+            </p>
+        </div>
+    </footer>
+
+    <!-- Contact Form Modal (Hidden by default) -->
+    <div id="contact-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <!-- Backdrop -->
+        <div 
+            class="absolute inset-0 bg-stone-900/60 backdrop-blur-sm cursor-pointer"
+            onclick="closeContact()"
+        ></div>
+        
+        <!-- Modal Content -->
+        <div class="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl p-6 sm:p-10 transform transition-all">
+            <button 
+                onclick="closeContact()"
+                class="absolute top-6 right-6 text-stone-400 hover:text-stone-900 bg-stone-100 hover:bg-stone-200 rounded-full p-2 transition-colors"
+                aria-label="Close"
+            >
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            
+            <div class="mb-8 pr-8">
+                <h2 class="text-3xl font-black text-stone-900 mb-2">Say Hello!</h2>
+                <p class="text-stone-500">Want to join the mission, or just grab a coffee? Drop us a line.</p>
+            </div>
+            
+            <!-- FormSubmit Configuration -->
+            <form action="https://formsubmit.co/hello@sendfriends.org" method="POST" class="space-y-4">
+                <!-- FormSubmit hidden setup fields -->
+                <input type="hidden" name="_subject" value="New message from SendFriends Website!" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                <!-- Setup where users are redirected after submitting, empty uses default page -->
+                <input type="hidden" name="_next" value=""> 
+                
+                <div>
+                    <label for="name" class="block text-sm font-bold text-stone-700 mb-1">Your Name</label>
+                    <input 
+                        type="text" 
+                        id="name"
+                        name="name" 
+                        required
+                        class="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                        placeholder="Jane Doe"
+                    />
+                </div>
+                
+                <div>
+                    <label for="email" class="block text-sm font-bold text-stone-700 mb-1">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email"
+                        name="email" 
+                        required
+                        class="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                        placeholder="jane@example.com"
+                    />
+                </div>
+                
+                <div>
+                    <label for="message" class="block text-sm font-bold text-stone-700 mb-1">Message</label>
+                    <textarea 
+                        id="message"
+                        name="message" 
+                        required
+                        rows="4"
+                        class="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all resize-none"
+                        placeholder="I'd love to hear more about the Japan trip..."
+                    ></textarea>
+                </div>
+                
+                <button 
+                    type="submit"
+                    class="w-full bg-stone-900 text-white font-bold py-4 rounded-xl hover:bg-emerald-700 transition-colors flex justify-center items-center gap-2 mt-4"
+                >
+                    Send Message <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+                <p class="text-xs text-center text-stone-400 mt-4">
+                    Powered by FormSubmit. No spam, we promise.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Application Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Prayer Generator Logic
+        const prayerPrompts = [
+            "Pray for the 120+ million unreached people in Japan to experience the love of Christ.",
+            "Pray for isolation and loneliness among Japanese youth to be met with true community.",
+            "Pray for our field teams learning the language and building initial relationships.",
+            "Pray for the multiplication of local, indigenous church leaders in Tokyo.",
+            "Pray for a breakthrough in rural Japanese towns where no churches exist."
+        ];
+        
+        let prayerIndex = 0;
+        const prayerElement = document.getElementById('prayer-text');
+
+        // Initial setup
+        prayerElement.innerText = `"${prayerPrompts[0]}"`;
+
+        function nextPrayer() {
+            prayerIndex = (prayerIndex + 1) % prayerPrompts.length;
+            
+            // Add a quick fade effect
+            prayerElement.style.opacity = 0;
+            setTimeout(() => {
+                prayerElement.innerText = `"${prayerPrompts[prayerIndex]}"`;
+                prayerElement.style.opacity = 1;
+            }, 200);
+        }
+
+        // Contact Modal Logic
+        const modal = document.getElementById('contact-modal');
+        
+        function openContact() {
+            modal.classList.remove('hidden');
+            // Prevent background scrolling
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeContact() {
+            modal.classList.add('hidden');
+            // Restore background scrolling
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && !modal.classList.contains('hidden')) {
+                closeContact();
+            }
+        });
+    </script>
+</body>
+</html>
