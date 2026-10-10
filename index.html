@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
+<!-- Essential Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SendFriends | A Generation on Mission</title>
-    
-    <!-- Essential Meta Tags -->
     <meta name="description" content="We are a collective of friends passionate about the Great Commission. Taking the greatest story to the ends of the earth.">
     <meta name="theme-color" content="#059669">
-    <link rel="canonical" href="https://welldonecafe.github.io/sendfriends/">
+    <!-- FIX: Updated Canonical URL to the correct custom domain -->
+    <link rel="canonical" href="https://sendfriends.org/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://welldonecafe.github.io/sendfriends/">
+    <meta property="og:url" content="https://sendfriends.org/">
     <meta property="og:title" content="SendFriends | A Generation on Mission">
     <meta property="og:description" content="We are a collective of friends passionate about the Great Commission. Taking the greatest story to the ends of the earth.">
-    <meta property="og:image" content="https://welldonecafe.github.io/sendfriends/image/og-image.png">
+    <!-- FIX: Updated OG Image URL to the custom domain. Ensure this file actually exists in your repository! -->
+    <meta property="og:image" content="https://sendfriends.org/image/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="SendFriends - A Generation on Mission">
@@ -25,21 +25,33 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@SendFriends">
-    <meta name="twitter:url" content="https://welldonecafe.github.io/sendfriends/">
+    <meta name="twitter:url" content="https://sendfriends.org/">
     <meta name="twitter:title" content="SendFriends | A Generation on Mission">
     <meta name="twitter:description" content="We are a collective of friends passionate about the Great Commission. Taking the greatest story to the ends of the earth.">
-    <meta name="twitter:image" content="https://welldonecafe.github.io/sendfriends/image/og-image.png">
+    <meta name="twitter:image" content="https://sendfriends.org/image/og-image.png">
     
-    <!-- Favicons & App Icons -->
-    <link rel="icon" href="https://welldonecafe.github.io/sendfriends/image/favicon.ico" sizes="any">
-    <link rel="icon" type="image/svg+xml" href="https://welldonecafe.github.io/sendfriends/image/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://welldonecafe.github.io/sendfriends/image/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://welldonecafe.github.io/sendfriends/image/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://welldonecafe.github.io/sendfriends/image/apple-touch-icon.png">
-    <link rel="manifest" href="https://welldonecafe.github.io/sendfriends/site.webmanifest">
+    <!-- Favicons & App Icons (Updated to relative paths for better portability) -->
+    <link rel="icon" href="/image/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="/image/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "SendFriends | A Generation on Mission",
+      "description": "We are a collective of friends passionate about the Great Commission. Taking the greatest story to the ends of the earth.",
+      "url": "https://sendfriends.org/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "SendFriends"
+      }
+    }
+    </script>
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
