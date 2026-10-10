@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SendFriends | Our Mission</title>
+    
+    <!-- Essential Meta Tags -->
+    <meta name="description" content="We are a collective of friends passionate about the Great Commission. Taking the greatest story to the ends of the earth.">
+    <meta name="theme-color" content="#059669">
+    <link rel="canonical" href="https://welldonecafe.github.io/sendfriends/about.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://welldonecafe.github.io/sendfriends/about.html">
+    <meta property="og:title" content="SendFriends | Our Mission">
+    <meta property="og:description" content="We are a collective of friends passionate about the Great Commission. Taking the greatest story to the ends of the earth.">
+    <meta property="og:image" content="https://welldonecafe.github.io/sendfriends/image/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="SendFriends - A Generation on Mission">
+    <meta property="og:site_name" content="SendFriends">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SendFriends">
+    <meta name="twitter:url" content="https://welldonecafe.github.io/sendfriends/about.html">
+    <meta name="twitter:title" content="SendFriends | Our Mission">
+    <meta name="twitter:description" content="We are a collective of friends passionate about the Great Commission. Taking the greatest story to the ends of the earth.">
+    <meta name="twitter:image" content="https://welldonecafe.github.io/sendfriends/image/og-image.png">
+    
+    <!-- Favicons & App Icons -->
+    <link rel="icon" href="https://welldonecafe.github.io/sendfriends/image/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="https://welldonecafe.github.io/sendfriends/image/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://welldonecafe.github.io/sendfriends/image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://welldonecafe.github.io/sendfriends/image/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://welldonecafe.github.io/sendfriends/image/apple-touch-icon.png">
+    <link rel="manifest" href="https://welldonecafe.github.io/sendfriends/site.webmanifest">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-stone-50 text-stone-800 font-sans selection:bg-emerald-200">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-stone-50/90 backdrop-blur-md z-40 border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <!-- Logo / Home Link (Returns to Linktree) -->
+            <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity" aria-label="Go to Links">
+                <img src="https://welldonecafe.github.io/sendfriends/image/globe.png" alt="SendFriends Logo" class="w-8 h-8" />
+                <span class="text-2xl font-black tracking-tight text-stone-900">SendFriends.</span>
+            </a>
+            
+            <div class="flex items-center gap-4 sm:gap-6">
+                <div class="hidden sm:flex items-center gap-6 text-sm font-semibold text-stone-600">
+                    <a href="#story" class="hover:text-emerald-600 transition-colors">Our Mission</a>
+                    <a href="#japan" class="hover:text-emerald-600 transition-colors">Focus Areas</a>
+                    <a href="#impact" class="hover:text-emerald-600 transition-colors">Impact</a>
+                </div>
+                <button 
+                    onclick="openDonate()" 
+                    class="flex items-center justify-center gap-2 bg-emerald-700 text-stone-50 px-6 sm:px-8 py-2.5 rounded-full font-bold text-sm hover:bg-stone-900 transition-all shadow-sm group"
+                    aria-label="Donate"
+                >
+                    <i data-lucide="heart" class="text-rose-400 w-6 h-6 group-hover:scale-110 transition-transform"></i>
+                    <span>Donate</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-6 sm:pt-40 sm:pb-32">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-bold mb-4">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                <span>A Generation on Mission</span>
+            </div>
+            
+            <!-- Added Image Here -->
+            <div class="w-full max-w-3xl mx-auto relative group">
+                <img 
+                    src="image/IMG_3581.png" 
+                    alt="SendFriends Mission" 
+                    class="w-full h-auto max-h-[450px] object-cover rounded-3xl shadow-2xl border border-stone-200 transition-transform duration-500 group-hover:scale-[1.01]" 
+                />
+                <div class="absolute inset-0 rounded-3xl ring-1 ring-inset ring-black/10 pointer-events-none"></div>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-stone-900 leading-[1.1] tracking-tight max-w-3xl mx-auto text-balance">
+                Taking the Greatest Story to the ends of the earth.
+            </h1>
+            <p class="text-lg sm:text-xl text-stone-600 max-w-2xl mx-auto leading-relaxed">
+                We are a collective of friends passionate about the Great Commission. 
+                No complex jargon, no heavy bureaucracy—just radical obedience and a deep love for the unreached.
+            </p>
+            <div class="pt-4">
+                <a href="#story" class="inline-flex items-center gap-2 text-emerald-700 font-bold hover:gap-4 transition-all group">
+                    Discover our mission <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Story / Mission Section -->
+    <section id="story" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-black text-stone-900 mb-4">The Heartbeat</h2>
+                <p class="text-stone-500 max-w-2xl mx-auto">Why we do what we do, broken down into three simple truths.</p>
+            </div>
+            
+            <div class="grid sm:grid-cols-3 gap-8">
+                <div class="bg-stone-50 p-8 rounded-3xl border border-stone-100">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-600 mb-6">
+                        <i data-lucide="map" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-stone-900">The Journey</h3>
+                    <p class="text-stone-600 leading-relaxed">
+                        It starts with a simple "yes". We believe everyone has a role to play in God's global story. Whether you are called to go, pray, or send, the journey is meant to be taken together as friends.
+                    </p>
+                </div>
+                
+                <div class="bg-stone-50 p-8 rounded-3xl border border-stone-100">
+                    <div class="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600 mb-6">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-stone-900">The Unreached</h3>
+                    <p class="text-stone-600 leading-relaxed">
+                        Over 3 billion people have never heard the name of Jesus. They don't have a Bible in their language or a believer in their neighborhood. We are focusing our lives on changing that statistic.
+                    </p>
+                </div>
+
+                <div class="bg-stone-50 p-8 rounded-3xl border border-stone-100">
+                    <div class="w-12 h-12 bg-rose-100 rounded-2xl flex items-center justify-center text-rose-600 mb-6">
+                        <i data-lucide="book-open" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-stone-900">Great Commission</h3>
+                    <p class="text-stone-600 leading-relaxed">
+                        Matthew 28 isn't the "Great Suggestion." It's our primary calling. We exist to make disciples of all nations, prioritizing places where the gospel has not yet taken root.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Country Focus: Japan -->
+    <section id="japan" class="py-20 sm:py-32 bg-stone-900 text-stone-50 relative overflow-hidden">
+        
+        <!-- Detailed Japanese Archipelago Vector Outline -->
+        <div class="absolute inset-0 z-0 opacity-10 sm:opacity-15 pointer-events-none flex justify-end items-center pr-2 md:pr-16 lg:pr-24 overflow-hidden">
+            <svg viewBox="0 0 750 940" class="w-[400px] h-[500px] md:w-[580px] md:h-[720px] text-rose-500 fill-current stroke-rose-400/60 stroke-[1.5] filter drop-shadow-[0_0_15px_rgba(244,63,94,0.25)]" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Hokkaido -->
+                <path d="M575,70 C582,78 595,95 618,110 C635,120 658,124 668,135 C672,140 668,148 658,150 C650,152 662,158 678,162 C685,164 682,172 670,175 C650,180 635,190 622,212 C612,230 605,250 600,252 C595,252 588,238 578,232 C565,225 552,218 535,222 C520,225 510,235 502,242 C495,250 505,268 518,285 C524,295 522,305 515,308 C505,310 495,300 488,285 C482,272 478,252 485,240 C490,230 498,212 505,198 C515,180 522,185 530,175 C538,165 540,140 545,115 C550,92 562,75 575,70 Z" />
+                <!-- Sado Island -->
+                <path d="M428,348 C436,340 446,342 448,350 C445,358 435,364 426,358 C424,354 425,350 428,348 Z" />
+                <!-- Honshu -->
+                <path d="M525,308 C535,318 532,328 528,330 C518,332 512,326 505,335 C498,312 488,322 490,338 C478,345 470,352 465,362 C462,368 472,374 466,395 C455,420 435,440 425,455 C420,442 418,422 410,412 C402,405 392,415 392,440 C392,458 385,472 375,485 C360,495 345,505 328,518 C305,532 278,552 260,568 C248,576 242,580 242,584 C245,592 260,590 285,580 C315,570 345,565 356,564 C365,568 375,585 382,602 C395,618 410,622 418,605 C425,588 425,568 438,554 C448,555 456,548 462,555 C472,578 478,572 478,560 C488,558 495,545 504,555 C515,568 528,555 528,545 C520,520 510,488 518,455 C528,440 545,420 548,402 C550,380 545,355 530,340 C528,328 520,318 525,308 Z" />
+                <!-- Awaji Island -->
+                <path d="M358,566 C364,562 368,568 365,576 C360,580 356,575 358,566 Z" />
+                <!-- Shikoku -->
+                <path d="M348,575 C355,585 358,605 348,632 C342,648 335,655 330,652 C320,642 305,640 292,658 C282,670 274,665 272,652 C268,635 272,618 262,605 C255,595 260,592 272,596 C285,600 295,588 312,580 C328,575 340,570 348,575 Z" />
+                <!-- Kyushu -->
+                <path d="M242,595 C252,605 258,618 255,632 C252,645 248,665 248,695 C246,715 238,735 230,738 C222,740 218,728 220,715 C215,705 218,690 212,695 C205,702 208,718 202,720 C195,720 192,705 195,688 C198,675 190,660 192,645 C195,635 185,630 178,622 C172,615 178,602 188,598 C198,595 208,600 218,594 C228,590 236,590 242,595 Z" />
+                <!-- Nansei / Okinawa Islands Chain -->
+                <path d="M232,752 C236,748 239,756 237,766 C234,772 230,766 232,752 Z" />
+                <path d="M214,758 C221,755 224,763 221,769 C215,772 211,768 214,758 Z" />
+                <path d="M175,792 C183,788 187,795 182,803 C174,807 169,801 175,792 Z" />
+                <path d="M155,815 C161,812 163,818 159,823 C153,825 151,820 155,815 Z" />
+                <path d="M128,832 C136,825 143,831 138,843 C130,856 120,866 115,861 C111,855 120,845 128,832 Z" />
+                <path d="M85,885 C91,882 93,889 88,893 C82,895 81,890 85,885 Z" />
+                <path d="M58,905 C65,902 67,909 62,913 C55,915 54,910 58,905 Z" />
+            </svg>
+        </div>
+        
+        <div class="max-w-6xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-stone-800 text-stone-300 rounded-full text-xs font-bold mb-6 tracking-wider uppercase shadow-inner">
+                    Current Focus
+                </div>
+                <h2 class="text-4xl sm:text-6xl font-black mb-6 text-white drop-shadow-md">
+                    Target: <span class="text-rose-400">Japan</span>
+                </h2>
+                <p class="text-stone-300 text-lg leading-relaxed mb-8">
+                    Japan is the second largest unreached people group in the world. Despite being highly developed and technologically advanced, less than 1% of the population knows Jesus. We are sending teams to build relationships, plant seeds, and trust God for a revival in the Land of the Rising Sun.
+                </p>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center gap-3 text-stone-200 font-medium">
+                        <div class="w-2.5 h-2.5 rounded-full bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,0.6)]"></div>
+                        120+ Million Population
+                    </li>
+                    <li class="flex items-center gap-3 text-stone-200 font-medium">
+                        <div class="w-2.5 h-2.5 rounded-full bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,0.6)]"></div>
+                        &lt; 1% Evangelical Christian
+                    </li>
+                    <li class="flex items-center gap-3 text-stone-200 font-medium">
+                        <div class="w-2.5 h-2.5 rounded-full bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,0.6)]"></div>
+                        Deep need for community & hope
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Surprise Feature: Interactive Prayer Focus -->
+            <div class="bg-stone-800/90 backdrop-blur p-8 sm:p-10 rounded-[2rem] border border-stone-700 shadow-2xl relative">
+                <div class="flex justify-between items-center mb-8">
+                    <h3 class="text-2xl font-bold flex items-center gap-2">
+                        <i data-lucide="sparkles" class="text-amber-400 w-6 h-6"></i>
+                        Daily Prayer Focus
+                    </h3>
+                </div>
+                
+                <div class="bg-stone-900 p-6 rounded-2xl min-h-[160px] flex items-center mb-6 shadow-inner">
+                    <p id="prayer-text" class="text-lg sm:text-xl font-medium leading-relaxed text-stone-200 transition-opacity duration-300">
+                        <!-- Populated by JS -->
+                    </p>
+                </div>
+                
+                <button 
+                    onclick="nextPrayer()"
+                    class="w-full bg-stone-700 hover:bg-emerald-600 text-white font-bold py-4 rounded-xl transition-colors flex justify-center items-center gap-2 group mb-4"
+                >
+                    Generate New Prayer Need
+                    <i data-lucide="refresh-cw" class="w-5 h-5 group-hover:rotate-180 transition-transform duration-500"></i>
+                </button>
+                <div class="text-center space-y-1">
+                    <p class="text-stone-400 text-sm">Join us in lifting up Japan right where you are.</p>
+                    <a href="https://www.japanprayerguide.com/topics/all" target="_blank" rel="noopener noreferrer" class="text-xs text-stone-500 hover:text-stone-300 underline underline-offset-2 transition-colors">
+                        Prayer topics sourced from Japan Prayer Guide
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="py-20 bg-emerald-900 text-emerald-50">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-black mb-16 text-white">Our Growing Impact</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="space-y-2">
+                    <div class="text-4xl sm:text-6xl font-black text-emerald-300 count-up" data-target="1">0</div>
+                    <div class="text-sm font-medium uppercase tracking-widest text-emerald-200">Singular Focus</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl sm:text-6xl font-black text-emerald-300 count-up" data-target="3">0</div>
+                    <div class="text-sm font-medium uppercase tracking-widest text-emerald-200">Cities Reached</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl sm:text-6xl font-black text-emerald-300 count-up" data-target="12" data-suffix="+">0</div>
+                    <div class="text-sm font-medium uppercase tracking-widest text-emerald-200">Sent Friends</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl sm:text-6xl font-black text-emerald-300 count-up" data-target="500" data-suffix="+">0</div>
+                    <div class="text-sm font-medium uppercase tracking-widest text-emerald-200">Prayer Partners</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-50 py-12 border-t border-stone-200 text-center text-stone-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col items-center">
+            <a href="index.html" class="flex items-center gap-2 mb-6 hover:opacity-80 transition-opacity">
+                <img src="https://welldonecafe.github.io/sendfriends/image/globe.png" alt="SendFriends Logo" class="w-7 h-7" />
+                <span class="text-xl font-black text-stone-900">SendFriends.</span>
+            </a>
+            <p class="mb-6 max-w-md mx-auto text-sm">
+                Missionaries of Pioneers USA bringing the hope of the gospel to the unreached.
+            </p>
+            <div class="flex flex-wrap justify-center items-center gap-4 mb-8">
+                <button onclick="openContact()" class="text-stone-900 font-bold hover:text-emerald-600 underline decoration-2 underline-offset-4">
+                    Get in Touch
+                </button>
+            </div>
+            <p class="text-xs">
+                © <span id="year"></span> SendFriends. All rights reserved. 
+            </p>
+        </div>
+    </footer>
+
+    <!-- Contact Form Modal (Hidden by default) -->
+    <div id="contact-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <div class="absolute inset-0 bg-stone-900/60 backdrop-blur-sm cursor-pointer" onclick="closeContact()"></div>
+        <div class="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl p-5 sm:p-8 transform transition-all max-h-[95vh] overflow-y-auto">
+            <button onclick="closeContact()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-900 bg-stone-100 hover:bg-stone-200 rounded-full p-2 transition-colors z-10" aria-label="Close">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <!-- FORM ENTRY VIEW -->
+            <div id="form-view">
+                <div class="mb-4 pr-8">
+                    <h2 class="text-3xl font-black text-stone-900 mb-1">Hey There!</h2>
+                    <p class="text-stone-500 text-sm">Want to join the mission, or just grab a coffee? Drop us a line.</p>
+                </div>
+                
+                <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-3">
+                    <input type="hidden" name="_subject" value="New message from SendFriends Website!" />
+                    <input type="hidden" name="_template" value="table" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    
+                    <div>
+                        <label for="name" class="block text-sm font-bold text-stone-700 mb-1">Your Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-2.5 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all" placeholder="Jane Doe" />
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-bold text-stone-700 mb-1">Email Address</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2.5 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all" placeholder="jane@example.com" />
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-bold text-stone-700 mb-1">Message</label>
+                        <textarea id="message" name="message" required rows="3" class="w-full px-4 py-2.5 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all resize-none" placeholder="I'd love to hear more about your Japan trips..."></textarea>
+                    </div>
+
+                    <!-- Custom Math CAPTCHA -->
+                    <div>
+                        <label for="captcha-answer" class="block text-sm font-bold text-stone-700 mb-1">
+                            Security Check: <span id="captcha-question" class="text-emerald-700"></span>
+                        </label>
+                        <input type="number" id="captcha-answer" required class="w-full px-4 py-2.5 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all" placeholder="Enter the sum..." />
+                    </div>
+                    
+                    <button id="submit-btn" type="submit" class="w-full bg-stone-900 text-white font-bold py-3 rounded-xl hover:bg-emerald-700 transition-colors flex justify-center items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
+                        Send Message <i data-lucide="send" class="w-4 h-4"></i>
+                    </button>
+                    
+                    <p class="text-xs text-center text-stone-400">Powered by FormSubmit. No spam, we promise.</p>
+                    <div id="form-status" class="hidden mt-2 text-center"></div>
+                </form>
+            </div>
+
+            <!-- SUCCESS MESSAGE VIEW -->
+            <div id="success-view" class="hidden text-center py-6">
+                <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="check" class="w-8 h-8"></i>
+                </div>
+                <h2 class="text-2xl font-black text-stone-900 mb-2">Thank You!</h2>
+                <p class="text-stone-500 mb-6">Your message has been sent successfully. We'll be in touch soon!</p>
+                <button onclick="closeContact()" class="w-full bg-stone-900 text-white font-bold py-3 rounded-xl hover:bg-emerald-700 transition-colors">
+                    Close Window
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Donate Modal (Hidden by default) -->
+    <div id="donate-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <div class="absolute inset-0 bg-stone-900/60 backdrop-blur-sm cursor-pointer" onclick="closeDonate()"></div>
+        <div class="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl p-5 sm:p-8 transform transition-all max-h-[95vh] overflow-y-auto">
+            <button onclick="closeDonate()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-900 bg-stone-100 hover:bg-stone-200 rounded-full p-2 transition-colors z-10" aria-label="Close">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="pr-8 mb-6">
+                <h2 class="text-3xl font-black text-stone-900 mb-1">Partner With Us</h2>
+                <p class="text-stone-500 text-sm">Follow the steps below to easily give online via our Pioneers portal.</p>
+            </div>
+            
+            <div class="mb-8">
+                <label class="block text-sm font-bold text-stone-900 mb-3">Step 1. Note the Missionary/Project Account Number</label>
+                <div class="bg-stone-100 border border-stone-200 rounded-xl p-4 text-center mb-2">
+                    <span class="text-4xl font-mono font-black text-emerald-700 tracking-[0.2em] drop-shadow-sm">123456</span>
+                </div>
+                <p class="text-[11px] leading-tight text-stone-400 text-center italic max-w-sm mx-auto">
+                    For security purposes, this number cannot be automatically copied. Please manually enter it into the Pioneers donation portal.
+                </p>
+            </div>
+
+            <div class="mb-8">
+                <label class="block text-sm font-bold text-stone-900 mb-3">Step 2. Watch the giving tutorial video</label>
+                <video class="w-full rounded-xl shadow-sm border border-stone-200 bg-stone-100" autoplay loop muted playsinline>
+                    <source src="media/giving-tutorial.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div>
+                <label class="block text-sm font-bold text-stone-900 mb-3">Step 3. Go to the Pioneers Donation page</label>
+                <a href="https://pioneers.org/donate" target="_blank" rel="noopener noreferrer" onclick="closeDonate()" class="w-full bg-emerald-700 hover:bg-stone-900 text-white font-bold py-3.5 rounded-xl transition-colors flex justify-center items-center gap-2">
+                    Go to Pioneers Donate Page <i data-lucide="external-link" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Logic -->
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Prayer Generator Logic
+        const prayerPrompts = [
+            "Pray for the 120+ million unreached people in Japan to experience the love of Christ.",
+            "Pray for isolation and loneliness among Japanese youth to be met with true community.",
+            "Pray for our field teams learning the language and building initial relationships.",
+            "Pray for the multiplication of local, indigenous church leaders in Tokyo.",
+            "Pray for a breakthrough in rural Japanese towns where no churches exist.",
+            "Pray for the 'Hikikomori' (socially withdrawn) to find hope, healing, and reintegration.",
+            "Pray for overworked Japanese businessmen (salarymen) to find rest and true identity in Jesus.",
+            "Pray for the elderly population in Japan to hear the gospel in their twilight years.",
+            "Pray for Japanese students facing immense academic pressure to experience the peace of God.",
+            "Pray for the breakdown of spiritual strongholds tied to Shinto and Buddhist traditions.",
+            "Pray for Japanese Christians to have boldness in sharing their faith in a conformist society.",
+            "Pray for families navigating the high rates of depression and suicide in Japan.",
+            "Pray for the revitalization of the traditional Japanese church.",
+            "Pray for more cross-cultural workers to be called, funded, and sent to the Japanese islands.",
+            "Pray for creative arts and media to be used effectively for gospel outreach in Japan.",
+            "Pray for marriages and family units in Japan to be strengthened by biblical principles.",
+            "Pray for the minority groups and immigrants living in Japan to find welcoming Christian communities.",
+            "Pray for survivors of natural disasters in Japan to find enduring hope and restoration.",
+            "Pray for university campuses in Japan to become fertile ground for student ministries.",
+            "Pray for a sweeping movement of prayer to unite believers across the Japanese archipelago."
+        ];
+        
+        let prayerIndex = 0;
+        const prayerElement = document.getElementById('prayer-text');
+        
+        if (prayerElement) {
+            prayerElement.innerText = `"${prayerPrompts[0]}"`;
+        }
+
+        function nextPrayer() {
+            prayerIndex = (prayerIndex + 1) % prayerPrompts.length;
+            prayerElement.style.opacity = 0;
+            setTimeout(() => {
+                prayerElement.innerText = `"${prayerPrompts[prayerIndex]}"`;
+                prayerElement.style.opacity = 1;
+            }, 200);
+        }
+
+        // Impact Number Count-Up Logic
+        const animateCountUp = (el) => {
+            const target = parseInt(el.getAttribute('data-target'));
+            const suffix = el.getAttribute('data-suffix') || '';
+            const duration = 1200; 
+            const startTime = performance.now();
+
+            const updateCounter = (currentTime) => {
+                const elapsedTime = currentTime - startTime;
+                if (elapsedTime < duration) {
+                    const progress = elapsedTime / duration;
+                    const easeOut = progress * (2 - progress);
+                    const currentValue = Math.floor(easeOut * target);
+                    el.innerText = currentValue + suffix;
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    el.innerText = target + suffix;
+                }
+            };
+            requestAnimationFrame(updateCounter);
+        };
+
+        const countUpObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCountUp(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const countUpElements = document.querySelectorAll('.count-up');
+        countUpElements.forEach(el => countUpObserver.observe(el));
+
+        // CAPTCHA and Form Logic
+        let captchaTotal = 0;
+        function generateCaptcha() {
+            const num1 = Math.floor(Math.random() * 10) + 1;
+            const num2 = Math.floor(Math.random() * 10) + 1;
+            captchaTotal = num1 + num2;
+            const questionEl = document.getElementById('captcha-question');
+            const answerEl = document.getElementById('captcha-answer');
+            if (questionEl && answerEl) {
+                questionEl.innerText = `What is ${num1} + ${num2}?`;
+                answerEl.value = '';
+            }
+        }
+
+        const modal = document.getElementById('contact-modal');
+        const donateModal = document.getElementById('donate-modal');
+        const formView = document.getElementById('form-view');
+        const successView = document.getElementById('success-view');
+        const statusDiv = document.getElementById('form-status');
+        
+        function openContact() {
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            if (formView && successView && statusDiv) {
+                formView.classList.remove('hidden');
+                successView.classList.add('hidden');
+                statusDiv.classList.add('hidden'); 
+            }
+            generateCaptcha(); 
+        }
+
+        function closeContact() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function openDonate() {
+            donateModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDonate() {
+            donateModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                if (!modal.classList.contains('hidden')) closeContact();
+                if (!donateModal.classList.contains('hidden')) closeDonate();
+            }
+        });
+
+        // AJAX Form Submission
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const userAnswer = parseInt(document.getElementById('captcha-answer').value);
+            
+            if (userAnswer !== captchaTotal) {
+                statusDiv.innerHTML = `<div class="bg-rose-50 text-rose-700 p-3 rounded-xl border border-rose-100 font-bold text-sm">Incorrect math answer. Try again.</div>`;
+                statusDiv.classList.remove('hidden');
+                generateCaptcha();
+                return;
+            }
+
+            statusDiv.classList.add('hidden');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = `Sending... <i data-lucide="loader-2" class="w-4 h-4 animate-spin inline"></i>`;
+            submitBtn.disabled = true;
+            lucide.createIcons();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            fetch('https://formsubmit.co/ajax/hello@sendfriends.org', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success || data.message === "Form action is not activated. A new activation email has been sent to your email address.") {
+                    formView.classList.add('hidden');
+                    successView.classList.remove('hidden');
+                    form.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                statusDiv.innerHTML = `<div class="bg-rose-50 text-rose-700 p-3 rounded-xl border border-rose-100 font-bold text-sm">Oops! Something went wrong. Try again later.</div>`;
+                statusDiv.classList.remove('hidden');
+            })
+            .finally(() => {
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+                lucide.createIcons();
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SendFriends | A Generation on Mission</title>
+    
+    <!-- Essential Meta Tags -->
+    <meta name="description" content="We are a collective of friends passionate about the Great Commission. Taking the greatest story to the ends of the earth.">
+    <meta name="theme-color" content="#059669">
+    <link rel="canonical" href="https://welldonecafe.github.io/sendfriends/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://welldonecafe.github.io/sendfriends/">
+    <meta property="og:title" content="SendFriends | A Generation on Mission">
+    <meta property="og:description" content="We are a collective of friends passionate about the Great Commission. Taking the greatest story to the ends of the earth.">
+    <meta property="og:image" content="https://welldonecafe.github.io/sendfriends/image/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="SendFriends - A Generation on Mission">
+    <meta property="og:site_name" content="SendFriends">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SendFriends">
+    <meta name="twitter:url" content="https://welldonecafe.github.io/sendfriends/">
+    <meta name="twitter:title" content="SendFriends | A Generation on Mission">
+    <meta name="twitter:description" content="We are a collective of friends passionate about the Great Commission. Taking the greatest story to the ends of the earth.">
+    <meta name="twitter:image" content="https://welldonecafe.github.io/sendfriends/image/og-image.png">
+    
+    <!-- Favicons & App Icons -->
+    <link rel="icon" href="https://welldonecafe.github.io/sendfriends/image/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="https://welldonecafe.github.io/sendfriends/image/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://welldonecafe.github.io/sendfriends/image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://welldonecafe.github.io/sendfriends/image/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://welldonecafe.github.io/sendfriends/image/apple-touch-icon.png">
+    <link rel="manifest" href="https://welldonecafe.github.io/sendfriends/site.webmanifest">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "SendFriends | A Generation on Mission",
+      "description": "We are a collective of friends passionate about the Great Commission. Taking the greatest story to the ends of the earth.",
+      "url": "https://welldonecafe.github.io/sendfriends/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "SendFriends"
+      }
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-stone-50 text-stone-800 font-sans selection:bg-emerald-200 flex flex-col items-center py-16 px-6">
+
+    <!-- Main Content Wrapper (Smooth Fade-In) -->
+    <div class="w-full max-w-md mx-auto opacity-0 animate-fade-in flex flex-col items-center">
+        
+        <!-- Profile / Header -->
+        <div class="text-center mb-10">
+            <img src="https://welldonecafe.github.io/sendfriends/image/globe.png" alt="SendFriends Logo" class="w-24 h-24 mx-auto mb-4 hover:scale-105 transition-transform duration-300" />
+            <h1 class="text-3xl font-black tracking-tight text-stone-900 mb-2">SendFriends.</h1>
+            <p class="max-w-[300px] mx-auto text-sm text-stone-600 leading-relaxed">
+                Missionaries of Pioneers USA bringing the hope of the gospel to the unreached.
+            </p>
+        </div>
+
+        <!-- Links Container -->
+        <div class="w-full space-y-4">
+            
+            <!-- About Us (Links to about.html) -->
+            <a href="https://sendfriends.org/about.html" target="_blank" rel="noopener noreferrer"  class="group flex items-center justify-start w-full p-4 bg-white border border-stone-200 rounded-2xl shadow-sm hover:shadow-md hover:border-emerald-200 transition-all active:scale-[0.98]">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center text-stone-600 group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors">
+                        <i data-lucide="users" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-bold text-stone-900">About Us</span>
+                </div>
+            </a>
+
+            <!-- Donate Button (Opens Modal) -->
+            <button onclick="openDonate()" class="group flex items-center justify-start w-full p-4 bg-emerald-700 border border-emerald-800 rounded-2xl shadow-sm hover:shadow-md hover:bg-stone-900 transition-all active:scale-[0.98]">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 bg-emerald-600/50 rounded-full flex items-center justify-center transition-colors">
+                        <i data-lucide="heart" class="text-rose-400 w-6 h-6 group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <span class="font-bold text-white">Donate</span>
+                </div>
+            </button>
+
+            <!-- Newsletter Sign Up (Links externally) -->
+            <a href="https://eepurl.com/jfKowA" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-start w-full p-4 bg-white border border-stone-200 rounded-2xl shadow-sm hover:shadow-md hover:border-emerald-200 transition-all active:scale-[0.98]">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center text-stone-600 group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors">
+                        <i data-lucide="mail-plus" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-bold text-stone-900">Newsletter Sign Up</span>
+                </div>
+            </a>
+
+            <!-- Prayer Topics (Links externally) -->
+            <a href="https://www.japanprayerguide.com/topics/all" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-start w-full p-4 bg-white border border-stone-200 rounded-2xl shadow-sm hover:shadow-md hover:border-emerald-200 transition-all active:scale-[0.98]">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center text-stone-600 group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors">
+                        <!-- Simplistic Minimalist Praying Hands Icon -->
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 21V6c0-1.1-.9-2-2-2s-2 .9-2 2v6"/>
+                            <path d="M12 21V6c0-1.1.9-2 2-2s2 .9 2 2v6"/>
+                            <path d="M8 12l-2-1c-.8-.4-1.5.3-1 1l3 4"/>
+                            <path d="M16 12l2-1c.8-.4 1.5.3 1 1l-3 4"/>
+                        </svg>
+                    </div>
+                    <span class="font-bold text-stone-900">Prayer Topics</span>
+                </div>
+            </a>
+
+            <!-- Contact Us (Opens Modal) -->
+            <button onclick="openContact()" class="group flex items-center justify-start w-full p-4 bg-white border border-stone-200 rounded-2xl shadow-sm hover:shadow-md hover:border-emerald-200 transition-all active:scale-[0.98]">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center text-stone-600 group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-bold text-stone-900">Contact Us</span>
+                </div>
+            </button>
+            
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-12 text-center flex flex-col items-center gap-3">
+            <p class="text-xs text-stone-400">
+                © <span id="year"></span> SendFriends. All rights reserved.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Contact Modal (Hidden by default) -->
+    <div id="contact-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-stone-900/60 backdrop-blur-sm cursor-pointer" onclick="closeContact()"></div>
+        
+        <!-- Modal Content -->
+        <div class="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl p-5 sm:p-8 transform transition-all max-h-[95vh] overflow-y-auto">
+            
+            <button onclick="closeContact()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-900 bg-stone-100 hover:bg-stone-200 rounded-full p-2 transition-colors z-10" aria-label="Close">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <!-- FORM ENTRY VIEW -->
+            <div id="form-view">
+                <div class="mb-4 pr-8">
+                    <h2 id="modal-title" class="text-3xl font-black text-stone-900 mb-1">Hey There!</h2>
+                    <p id="modal-subtitle" class="text-stone-500 text-sm">Want to join the mission, or just grab a coffee? Drop us a line.</p>
+                </div>
+                
+                <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-3">
+                    <!-- FormSubmit setup fields -->
+                    <input type="hidden" id="subject-hidden" name="_subject" value="New message from SendFriends Website!" />
+                    <input type="hidden" name="_template" value="table" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    
+                    <div>
+                        <label for="name" class="block text-sm font-bold text-stone-700 mb-1">Your Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-2.5 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all" placeholder="Jane Doe" />
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-bold text-stone-700 mb-1">Email Address</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2.5 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all" placeholder="jane@example.com" />
+                    </div>
+                    
+                    <div id="message-container">
+                        <label for="message" class="block text-sm font-bold text-stone-700 mb-1">Message</label>
+                        <textarea id="message" name="message" required rows="3" class="w-full px-4 py-2.5 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all resize-none" placeholder="I'd love to hear more about your Japan trips..."></textarea>
+                    </div>
+
+                    <!-- Custom Math CAPTCHA -->
+                    <div>
+                        <label for="captcha-answer" class="block text-sm font-bold text-stone-700 mb-1">
+                            Security Check: <span id="captcha-question" class="text-emerald-700"></span>
+                        </label>
+                        <input type="number" id="captcha-answer" required class="w-full px-4 py-2.5 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all" placeholder="Enter the sum..." />
+                    </div>
+                    
+                    <button id="submit-btn" type="submit" class="w-full bg-stone-900 text-white font-bold py-3 rounded-xl hover:bg-emerald-700 transition-colors flex justify-center items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
+                        <span id="submit-btn-text">Send Message</span> <i data-lucide="send" class="w-4 h-4"></i>
+                    </button>
+                    
+                    <p class="text-xs text-center text-stone-400">Powered by FormSubmit. No spam, we promise.</p>
+                    <div id="form-status" class="hidden mt-2 text-center"></div>
+                </form>
+            </div>
+
+            <!-- SUCCESS MESSAGE VIEW -->
+            <div id="success-view" class="hidden text-center py-6">
+                <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="check" class="w-8 h-8"></i>
+                </div>
+                <h2 class="text-2xl font-black text-stone-900 mb-2">Thank You!</h2>
+                <p class="text-stone-500 mb-6">Your submission has been received successfully. We'll be in touch soon!</p>
+                <button onclick="closeContact()" class="w-full bg-stone-900 text-white font-bold py-3 rounded-xl hover:bg-emerald-700 transition-colors">
+                    Close Window
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Donate Modal (Hidden by default) -->
+    <div id="donate-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <div class="absolute inset-0 bg-stone-900/60 backdrop-blur-sm cursor-pointer" onclick="closeDonate()"></div>
+        
+        <div class="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl p-5 sm:p-8 transform transition-all max-h-[95vh] overflow-y-auto">
+            
+            <button onclick="closeDonate()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-900 bg-stone-100 hover:bg-stone-200 rounded-full p-2 transition-colors z-10" aria-label="Close">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="pr-8 mb-6">
+                <h2 class="text-3xl font-black text-stone-900 mb-1">Partner With Us</h2>
+                <p class="text-stone-500 text-sm">Follow the steps below to easily give online via our Pioneers portal.</p>
+            </div>
+            
+            <div class="mb-8">
+                <label class="block text-sm font-bold text-stone-900 mb-3">Step 1. Note the Missionary/Project Account Number</label>
+                <div class="bg-stone-100 border border-stone-200 rounded-xl p-4 text-center mb-2">
+                    <span class="text-4xl font-mono font-black text-emerald-700 tracking-[0.2em] drop-shadow-sm">123456</span>
+                </div>
+                <p class="text-[11px] leading-tight text-stone-400 text-center italic max-w-sm mx-auto">
+                    For security purposes, this number cannot be automatically copied. Please manually enter it into the Pioneers donation portal.
+                </p>
+            </div>
+
+            <div class="mb-8">
+                <label class="block text-sm font-bold text-stone-900 mb-3">Step 2. Watch the giving tutorial video</label>
+                <video class="w-full rounded-xl shadow-sm border border-stone-200 bg-stone-100" autoplay loop muted playsinline>
+                    <source src="media/giving-tutorial.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div>
+                <label class="block text-sm font-bold text-stone-900 mb-3">Step 3. Go to the Pioneers Donation page</label>
+                <a href="https://pioneers.org/donate" target="_blank" rel="noopener noreferrer" onclick="closeDonate()" class="w-full bg-emerald-700 hover:bg-stone-900 text-white font-bold py-3.5 rounded-xl transition-colors flex justify-center items-center gap-2">
+                    Go to Pioneers Donate Page <i data-lucide="external-link" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        let captchaTotal = 0;
+        function generateCaptcha() {
+            const num1 = Math.floor(Math.random() * 10) + 1;
+            const num2 = Math.floor(Math.random() * 10) + 1;
+            captchaTotal = num1 + num2;
+            document.getElementById('captcha-question').innerText = `What is ${num1} + ${num2}?`;
+            document.getElementById('captcha-answer').value = '';
+        }
+
+        const contactModal = document.getElementById('contact-modal');
+        const donateModal = document.getElementById('donate-modal');
+        const formView = document.getElementById('form-view');
+        const successView = document.getElementById('success-view');
+        const statusDiv = document.getElementById('form-status');
+
+        function resetFormState() {
+            contactModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            formView.classList.remove('hidden');
+            successView.classList.add('hidden');
+            statusDiv.classList.add('hidden'); 
+            generateCaptcha(); 
+        }
+
+        function openContact() {
+            resetFormState();
+            document.getElementById('modal-title').innerText = "Hey There!";
+            document.getElementById('modal-subtitle').innerText = "Want to join the mission, or just grab a coffee? Drop us a line.";
+            document.getElementById('message-container').classList.remove('hidden');
+            document.getElementById('message').required = true;
+            document.getElementById('subject-hidden').value = "New message from SendFriends Website!";
+            document.getElementById('submit-btn-text').innerText = "Send Message";
+        }
+
+        function closeContact() {
+            contactModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function openDonate() {
+            donateModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDonate() {
+            donateModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modals on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeContact();
+                closeDonate();
+            }
+        });
+
+        // Form Submission
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const submitBtnText = document.getElementById('submit-btn-text');
+            const userAnswer = parseInt(document.getElementById('captcha-answer').value);
+            
+            if (userAnswer !== captchaTotal) {
+                statusDiv.innerHTML = `<div class="bg-rose-50 text-rose-700 p-3 rounded-xl border border-rose-100 font-bold text-sm">Incorrect math answer. Try again.</div>`;
+                statusDiv.classList.remove('hidden');
+                generateCaptcha();
+                return;
+            }
+
+            statusDiv.classList.add('hidden');
+            const originalText = submitBtnText.innerText;
+            submitBtnText.innerHTML = `Sending... <i data-lucide="loader-2" class="w-4 h-4 animate-spin inline"></i>`;
+            submitBtn.disabled = true;
+            lucide.createIcons();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            fetch('https://formsubmit.co/ajax/hello@sendfriends.org', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success || data.message === "Form action is not activated. A new activation email has been sent to your email address.") {
+                    formView.classList.add('hidden');
+                    successView.classList.remove('hidden');
+                    form.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                statusDiv.innerHTML = `<div class="bg-rose-50 text-rose-700 p-3 rounded-xl border border-rose-100 font-bold text-sm">Oops! Something went wrong. Try again later.</div>`;
+                statusDiv.classList.remove('hidden');
+            })
+            .finally(() => {
+                submitBtnText.innerText = originalText;
+                submitBtn.disabled = false;
+                lucide.createIcons();
+            });
+        }
+    </script>
+</body>
+</html>

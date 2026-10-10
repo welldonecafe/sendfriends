@@ -1,0 +1,70 @@
+name: Purge History & Workflow Logs
+
+on:
+  workflow_dispatch: # Allows you to manually trigger this from the "Actions" tab
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetches full history so we can delete it
+
+      - name: Configure Git Author
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Wipe Git Commit History
+        run: |
+          echo "⏳ Creating clean, orphan branch..."
+          git checkout --orphan temp_clean_branch
+          
+          echo "➕ Staging current files..."
+          git add -A
+          git commit -m "Initial commit (Clean History)"
+          
+          echo "🗑️ Replacing main branch..."
+          git branch -D main || true
+          git branch -m main
+          
+          echo "📤 Force-pushing to remote..."
+          git push -f origin main
+
+      - name: Clear past Workflow Runs via API
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "📡 Fetching and deleting workflow runs..."
+          PAGE=1
+          while :; do
+              # Get all workflow run IDs for this repository
+              RUNS=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
+                  "https://github.com{{ github.repository }}/actions/runs?per_page=100&page=$PAGE" \
+                  | jq '.workflow_runs[]?.id')
+
+              if [[ -z "$RUNS" || "$RUNS" == "null" ]]; then
+                  echo "✅ All past workflow runs deleted."
+                  break
+              fi
+
+              for RUN_ID in $RUNS; do
+                  # Skip the active running workflow so it doesn't kill itself mid-execution
+                  if [ "$RUN_ID" = "${{ github.run_id }}" ]; then
+                      continue
+                  fi
+                  echo "🗑️ Deleting run ID: $RUN_ID"
+                  curl -s -X DELETE \
+                      -H "Authorization: Bearer $GH_TOKEN" \
+                      "https://github.com{{ github.repository }}/actions/runs/$RUN_ID"
+              done
+              
+              ((PAGE++))
+              sleep 1
+          done
