@@ -534,6 +534,13 @@
                 lucide.createIcons();
             });
         }
+
+        // Open the Send Me form automatically when arriving via sendfriends.org/#send (e.g. from the PDF guide)
+        function openSendFromHash() {
+            if (window.location.hash === '#send') openSend();
+        }
+        openSendFromHash();
+        window.addEventListener('hashchange', openSendFromHash);
     </script>
 </body>
 </html>
