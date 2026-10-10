@@ -384,6 +384,18 @@
                         "Also I heard the voice of the Lord, saying, Whom shall I send, and who will go for us? Then said I, Here am I; send me."
                         <span class="not-italic font-bold text-emerald-700 whitespace-nowrap">&mdash; Isaiah 6:8</span>
                     </p>
+
+                    <!-- Resource buttons -->
+                    <div class="mt-4 flex items-stretch gap-3">
+                        <a href="https://vimeo.com/324251340" onclick="openVideo(event)" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 bg-white text-stone-900 border border-stone-300 text-sm font-bold py-2.5 px-3 rounded-xl hover:border-emerald-600 hover:text-emerald-700 transition-colors">
+                            <i data-lucide="video" class="w-4 h-4 shrink-0"></i>
+                            <span>Watch Video</span>
+                        </a>
+                        <a href="/media/SendMe-Pathway-Guide.pdf" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 bg-emerald-700 text-white text-sm font-bold py-2.5 px-3 rounded-xl hover:bg-stone-900 transition-colors">
+                            <i data-lucide="file-text" class="w-4 h-4 shrink-0"></i>
+                            <span>Pre-Launch Guide</span>
+                        </a>
+                    </div>
                 </div>
 
                 <form id="send-form" onsubmit="handleSendSubmit(event)" class="space-y-3">
@@ -448,6 +460,14 @@
                 </button>
             </div>
         </div>
+    </div>
+
+    <!-- Fullscreen Video Overlay (Vimeo) -->
+    <div id="video-overlay" class="fixed inset-0 z-[70] hidden bg-black items-center justify-center">
+        <button onclick="closeVideo()" class="absolute top-4 right-4 z-10 text-white bg-white/20 hover:bg-white/40 rounded-full p-2.5 transition-colors" aria-label="Close video">
+            <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <iframe id="video-frame" class="w-full h-full" src="" title="SendFriends video" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <!-- Application Logic -->
@@ -532,6 +552,32 @@
         const countUpElements = document.querySelectorAll('.count-up');
         countUpElements.forEach(el => countUpObserver.observe(el));
 
+        // ---------- Fullscreen video ----------
+        const videoOverlay = document.getElementById('video-overlay');
+        const videoFrame = document.getElementById('video-frame');
+        function openVideo(e) {
+            if (e) e.preventDefault();
+            videoFrame.src = 'https://player.vimeo.com/video/324251340?autoplay=1&title=0&byline=0&portrait=0';
+            videoOverlay.classList.remove('hidden');
+            videoOverlay.classList.add('flex');
+            if (videoOverlay.requestFullscreen) {
+                videoOverlay.requestFullscreen().catch(() => {});
+            }
+        }
+        function closeVideo() {
+            if (videoOverlay.classList.contains('hidden')) return;
+            videoOverlay.classList.add('hidden');
+            videoOverlay.classList.remove('flex');
+            videoFrame.src = '';
+            if (document.fullscreenElement && document.exitFullscreen) {
+                document.exitFullscreen().catch(() => {});
+            }
+        }
+        // If the visitor exits browser fullscreen (e.g. Escape), close the overlay too
+        document.addEventListener('fullscreenchange', () => {
+            if (!document.fullscreenElement) closeVideo();
+        });
+
         // ---------- Contact modal ----------
         let captchaTotal = 0;
         function generateCaptcha() {
@@ -610,6 +656,7 @@
 
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape") {
+                closeVideo();
                 if (!modal.classList.contains('hidden')) closeContact();
                 if (!sendModal.classList.contains('hidden')) closeSend();
             }
