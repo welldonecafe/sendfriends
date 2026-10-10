@@ -263,7 +263,7 @@
 
                     <!-- Resource buttons -->
                     <div class="mt-4 flex items-stretch gap-3">
-                        <a href="https://vimeo.com/324251340" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 bg-white text-stone-900 border border-stone-300 text-sm font-bold py-2.5 px-3 rounded-xl hover:border-emerald-600 hover:text-emerald-700 transition-colors">
+                        <a href="https://vimeo.com/324251340" onclick="openVideo(event)" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 bg-white text-stone-900 border border-stone-300 text-sm font-bold py-2.5 px-3 rounded-xl hover:border-emerald-600 hover:text-emerald-700 transition-colors">
                             <i data-lucide="video" class="w-4 h-4 shrink-0"></i>
                             <span>Watch Video</span>
                         </a>
@@ -339,6 +339,14 @@
         </div>
     </div>
 
+    <!-- Fullscreen Video Overlay (Vimeo) -->
+    <div id="video-overlay" class="fixed inset-0 z-[70] hidden bg-black items-center justify-center">
+        <button onclick="closeVideo()" class="absolute top-4 right-4 z-10 text-white bg-white/20 hover:bg-white/40 rounded-full p-2.5 transition-colors" aria-label="Close video">
+            <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <iframe id="video-frame" class="w-full h-full" src="" title="SendFriends video" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
     <!-- Scripts -->
     <script>
         lucide.createIcons();
@@ -346,6 +354,32 @@
 
         const FORM_ENDPOINT = 'https://formsubmit.co/ajax/hello@sendfriends.org';
         const FORM_NOT_ACTIVATED_MSG = "Form action is not activated. A new activation email has been sent to your email address.";
+
+        // ---------- Fullscreen video ----------
+        const videoOverlay = document.getElementById('video-overlay');
+        const videoFrame = document.getElementById('video-frame');
+        function openVideo(e) {
+            if (e) e.preventDefault();
+            videoFrame.src = 'https://player.vimeo.com/video/324251340?autoplay=1&title=0&byline=0&portrait=0';
+            videoOverlay.classList.remove('hidden');
+            videoOverlay.classList.add('flex');
+            if (videoOverlay.requestFullscreen) {
+                videoOverlay.requestFullscreen().catch(() => {});
+            }
+        }
+        function closeVideo() {
+            if (videoOverlay.classList.contains('hidden')) return;
+            videoOverlay.classList.add('hidden');
+            videoOverlay.classList.remove('flex');
+            videoFrame.src = '';
+            if (document.fullscreenElement && document.exitFullscreen) {
+                document.exitFullscreen().catch(() => {});
+            }
+        }
+        // If the visitor exits browser fullscreen (e.g. Escape), close the overlay too
+        document.addEventListener('fullscreenchange', () => {
+            if (!document.fullscreenElement) closeVideo();
+        });
 
         // ---------- Contact modal ----------
         let captchaTotal = 0;
@@ -430,6 +464,7 @@
         // Close modals on Escape key
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape") {
+                closeVideo();
                 closeContact();
                 closeSend();
             }
